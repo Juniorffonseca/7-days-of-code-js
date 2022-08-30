@@ -22,3 +22,20 @@ for(let contador = 0; contador < 3; contador++){
 if(!acertou){
     alert("Infelizmente, você não acertou. O número era ${numero}!");
 }
+
+var numeroRandomico = Math.floor(Math.random() * (10 - 0 + 1) + 0);
+let chute2 = "";
+let acertou2 = false;
+
+for(let contador = 0; contador < 3; contador++){    
+    chute2 = prompt("Tente adivinhar o número de 0 a 10:");
+    if(chute2 == numeroRandomico){
+        alert(`Parabéns, você acertou! O número era ${numeroRandomico}.`);
+        acertou2 = true;
+        break;
+    }
+    alert("Errado!");
+}
+if(!acertou2){
+    alert(`Infelizmente, você não acertou. O número era ${numeroRandomico}!`);
+}
